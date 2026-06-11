@@ -313,7 +313,120 @@ Yahan:
 ✅ Time Aur Effort Dono Bachate Hain
 
 ---
+# 🚫 How to Disable GitHub Actions Workflow
 
+---
+
+## 🤔 Workflow Disable Karne Ki Zarurat Kyu Padti Hai?
+
+Workflow disable karne ke kuch common reasons:
+
+* Workflow me errors aa rahe hain
+* Testing ke liye automation stop karna hai
+* Unnecessary workflow runs ko avoid karna hai
+* Maintenance work chal raha hai
+* Deployment temporarily rokna hai
+
+---
+
+## 🚀 Method 1: GitHub UI Se Workflow Disable Karna
+
+### Steps
+
+1. GitHub Repository Open Karo.
+2. **Actions** Tab Par Jao.
+3. Left Sidebar Se Workflow Select Karo.
+4. Workflow Page Open Hogi.
+5. Right Side Me **••• (Three Dots Menu)** Par Click Karo.
+6. **Disable Workflow** Option Select Karo.
+
+Workflow disable ho jayega aur future me automatically run nahi hoga.
+
+---
+
+## 🚀 Method 2: YAML File Ko Disable Karna
+
+Workflow trigger ko comment ya remove kar sakte hain.
+
+Before:
+
+```yaml
+on:
+  push:
+    branches:
+      - main
+```
+
+After:
+
+```yaml
+# on:
+#   push:
+#     branches:
+#       - main
+```
+
+Ya workflow file ko delete bhi kar sakte hain.
+
+---
+
+## 🚀 Method 3: Rename Workflow File
+
+Workflow file:
+
+```text
+.github/workflows/deploy.yml
+```
+
+Rename:
+
+```text
+deploy.yml.disabled
+```
+
+GitHub Actions is file ko workflow ke roop me identify nahi karega.
+
+---
+
+## 🔄 Workflow Disable Process
+
+```text
+Workflow Running
+       ↓
+Disable Workflow
+       ↓
+No Automatic Trigger
+       ↓
+Workflow Stopped
+```
+
+---
+
+## ✅ Workflow Enable Kaise Kare?
+
+Agar workflow dobara enable karna ho:
+
+1. Actions Tab Open Karo.
+2. Disabled Workflow Select Karo.
+3. **Enable Workflow** Button Par Click Karo.
+
+Workflow fir se active ho jayega.
+
+---
+
+## ✨ Benefits
+
+✅ Unwanted Executions Stop Hote Hain
+
+✅ Resource Usage Kam Hota Hai
+
+✅ Debugging Easy Ho Jati Hai
+
+✅ Maintenance Ke Liye Useful
+
+✅ Deployment Temporarily Control Kar Sakte Hain
+
+---
 
 
 
